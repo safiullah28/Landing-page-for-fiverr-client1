@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --primary-color: #ff8126;
+  --border-color: #b26601;
+  --main-text-color: #2a2e30;
+  --secondary-text-color: #000000;
+  --gray: #949494;
+  --img-color: #fff2e1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+.business-section {
+  margin-top: 50px;
+  background: url("../../../assets/img11.png");
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  height: 588px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.business-section > p {
+  font-family: Josefin Sans;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 166%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--gray);
+  max-width: 515px;
+}
+
+.business-section > h1 {
+  font-family: Josefin Sans;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 57px;
+  line-height: 122%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+.search-div {
+  width: 650px;
+  height: 50px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 8px 5px #00000026;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.search-div > input {
+  width: 129px;
+  height: 42px;
+  border: 0;
+  width: calc(650px - 20px);
+}
+.search-div > input:focus {
+  border: 1px solid red;
+}
+.search-div > input::placeholder {
+  padding: 5px;
+  text-align: start;
+  color: var(--main-text-color);
+}
+.search-div > button {
+  width: 129px;
+  height: 42px;
+  border-radius: 9px;
+  border: 0;
+  border-bottom: 3px solid var(--border-color);
+  gap: 10px;
+  background: var(--primary-color);
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+}
+
+@media screen and (max-width: 1115px) {
+  .business-section > p {
+    max-width: 415px;
+  }
+  .business-section {
+    height: auto;
+  }
+  .search-div {
+    max-width: 520px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .business-section > p {
+    max-width: 215px;
+  }
+  .business-section {
+    height: auto;
+  }
+  .search-div {
+    max-width: 300px;
+  }
+}

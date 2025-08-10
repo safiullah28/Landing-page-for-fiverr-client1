@@ -1,0 +1,192 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --primary-color: #ff8126;
+  --border-color: #b26601;
+  --main-text-color: #2a2e30;
+  --secondary-text-color: #000000;
+  --gray: #949494;
+  --img-color: #fff2e1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 24px;
+  line-height: 79px;
+  letter-spacing: 0%;
+  color: var(--secondary-text-color);
+}
+nav h1 span {
+  color: var(--primary-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--secondary-text-color);
+}
+
+nav .nav-buttons-div {
+  display: flex;
+  gap: 20px;
+}
+.nav-buttons-div .login-button {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--primary-color);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.nav-buttons-div .signup-button {
+  width: 113px;
+  height: 42px;
+  border-radius: 9px;
+  opacity: 1;
+  border: 0;
+  border-bottom: 3px solid var(--border-color);
+  padding-right: 14px;
+  padding-left: 14px;
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+nav .hamburger {
+  display: none;
+  cursor: pointer;
+}
+aside {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+  }
+  nav .hamburger {
+    display: block;
+    font-size: 30px;
+    padding: 20px;
+  }
+  nav h1 {
+    padding: 20px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav .nav-buttons-div {
+    display: none;
+  }
+  aside {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 0;
+    opacity: 0;
+    gap: 40px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -4px 0 4px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background: white;
+    z-index: 1000;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+  }
+
+  aside.active {
+    width: 80%;
+    opacity: 1;
+    left: 0;
+    padding: 20px;
+  }
+
+  aside .aside-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .aside-top h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 24px;
+    line-height: 79px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: var(--secondary-text-color);
+    width: 100%;
+  }
+  .aside-top h1 span {
+    color: var(--primary-color);
+  }
+  .aside-top .close {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  aside ul {
+    display: flex;
+    align-items: left;
+    gap: 20px;
+    flex-direction: column;
+  }
+  aside ul li a {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--secondary-text-color);
+  }
+
+  aside .nav-buttons-div {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    align-self: center;
+  }
+}

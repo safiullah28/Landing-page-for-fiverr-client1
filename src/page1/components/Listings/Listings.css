@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --primary-color: #ff8126;
+  --border-color: #b26601;
+  --main-text-color: #2a2e30;
+  --secondary-text-color: #000000;
+  --gray: #949494;
+  --img-color: #fff2e1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+.listings-section {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 30px;
+  align-items: center;
+}
+.listings-section > h1 {
+  font-family: Josefin Sans;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 57px;
+  line-height: 122%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+.listings-section > p {
+  width: 620px;
+  font-family: Josefin Sans;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 166%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
+  color: #8a8a8a;
+}
+
+.listings-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.frames {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.frames > div {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.listings-title-div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+}
+.listings-title-div > h1 {
+  font-family: Josefin Sans;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 30.8px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+  color: var(--secondary-text-color);
+  width: 320px;
+}
+.listings-title-div > h3 {
+  font-family: Work Sans;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 30.8px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+  color: var(--primary-color);
+  width: 150px;
+}
+
+.listings-content-div {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  font-family: Josefin Sans;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 20.16px;
+  line-height: 108%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+}
+
+.listings-button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.listings-button-div button {
+  width: 134.0000000000001px;
+  height: 42.00000762939457px;
+  border-radius: 12px;
+  border: 1px solid var(--primary-color);
+  background: #fff;
+  color: var(--primary-color);
+  gap: 10px;
+  border-width: 1px;
+  direction: ltr;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+@media screen and (max-width: 1030px) {
+  .frames > div {
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+  }
+  .listings-content-div {
+    flex-direction: column;
+  }
+
+  .listings-button-div button {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+}
+
+.frame2 > div .listings-img-div {
+  width: 193px;
+  height: 293px;
+}
+
+.listings-img-div img {
+  width: 100%;
+}
+
+.view-more-button {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.view-more-button button {
+  width: 196px;
+  height: 67px;
+  font-family: Open Sans;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 22px;
+  line-height: 108%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #fff;
+  background: var(--primary-color);
+  border-bottom: 3px solid var(--border-color);
+  border-radius: 9px;
+  border: 0;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+}
+
+@media screen and (max-width: 768px) {
+  .view-more-button {
+    padding: 40px;
+  }
+  .view-more-button button {
+    width: 100%;
+  }
+}

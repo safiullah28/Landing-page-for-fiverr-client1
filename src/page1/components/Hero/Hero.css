@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --primary-color: #ff8126;
+  --border-color: #b26601;
+  --main-text-color: #2a2e30;
+  --secondary-text-color: #000000;
+  --gray: #949494;
+  --img-color: #fff2e1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.hero-section .hero-section-left {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+  padding: 40px;
+}
+
+.hero-section .hero-section-left h1 {
+  font-family: Josefin Sans;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 57px;
+  line-height: 79px;
+  color: var(--secondary-text-color);
+  width: 100%;
+}
+.hero-section .hero-section-left h1 span {
+  color: var(--primary-color);
+}
+.hero-section .hero-section-left p {
+  font-family: Josefin Sans;
+  font-weight: 200;
+  font-style: ExtraLight;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: var(--gray);
+  width: 100%;
+}
+
+/* Add these styles to your Hero.css */
+
+.search-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+  height: 104px;
+  border-radius: 26px;
+  opacity: 1;
+  background: var(#fff);
+  margin-top: 20px;
+  box-shadow: 0px 5px 5px var(--gray);
+  padding: 15px;
+}
+
+.search-select {
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  border: 1px solid #b3b3b3;
+  border-radius: 8px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  color: var(--main-text-color);
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.search-select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(255, 129, 38, 0.2);
+}
+
+.search-select option {
+  padding: 10px;
+}
+
+.search-button {
+  height: 54px;
+  border-radius: 9px;
+  padding-top: 15px;
+  padding-right: 14px;
+  padding-bottom: 15px;
+  padding-left: 14px;
+  gap: 10px;
+  background: var(--primary-color);
+  border: 0;
+  border-bottom: 3px solid var(--border-color);
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+}
+
+.hero-section-right {
+  width: 100%;
+  padding: 40px;
+}
+.hero-section-right img {
+  width: 100%;
+}
+.search-button:hover {
+  background-color: #e67300;
+}
+
+@media screen and (max-width: 1115px) {
+  .hero-section {
+    flex-direction: column;
+  }
+  .search-button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    height: auto;
+    box-shadow: none;
+  }
+}

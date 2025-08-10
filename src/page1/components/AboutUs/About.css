@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --primary-color: #ff8126;
+  --border-color: #b26601;
+  --main-text-color: #2a2e30;
+  --secondary-text-color: #000000;
+  --gray: #949494;
+  --img-color: #fff2e1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+.about-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-container .about-container-left img {
+  width: 100%;
+}
+
+.about-container-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.about-container-right h1 {
+  font-family: Josefin Sans;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 57px;
+  line-height: 79px;
+  letter-spacing: 0%;
+
+  color: var(--secondary-text-color);
+}
+
+.about-container-right p {
+  max-width: 635px;
+  height: 240px;
+  font-family: Josefin Sans;
+  font-weight: 200;
+  font-style: ExtraLight;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 1115px) {
+  .about-container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-container-right p {
+    min-width: 374px;
+  }
+  .about-container-right {
+    padding: 40px;
+  }
+  .about-container-left {
+    display: none;
+  }
+}
